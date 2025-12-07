@@ -19,6 +19,20 @@ Gerçek hayat ticaret senaryolarını simüle eden Northwind veritabanı üzerin
 * **Business Logic:** İndirim oranları hesaba katılarak Net Ciro (Net Revenue) hesaplamaları yapıldı.
 * **Anti-Joins:** Hiç sipariş vermeyen "Pasif Müşteriler" tespit edildi.
 
+### 3. ETL Data Pipeline Automation with T-SQL ⚙️
+Kirli ve düzensiz verilerin otomatik olarak temizlenmesi, dönüştürülmesi ve raporlama katmanına taşınmasını sağlayan T-SQL Otomasyon projesi.
+
+**🎯 İş Problemi:**
+Kaynak sistemlerden gelen verilerde hatalı veri tipleri (String price), negatif değerler ve eksik bilgiler bulunmaktadır. Bu verilerin manuel temizlenmesi yerine, otomatize edilmiş bir **ETL (Extract-Transform-Load)** süreci gerekmektedir.
+
+**🛠️ Kullanılan Teknikler:**
+* **Stored Procedures:** Tüm iş mantığı 'sp_ETL_Satislar' prosedürü içine paketlendi.
+* **Data Cleaning:** 'TRY_CAST' fonksiyonu ile hatalı veri tipleri filtrelendi ve dönüştürüldü.
+* **Transaction Management:** Veri bütünlüğü için 'BEGIN TRANSACTION', 'COMMIT' ve 'ROLLBACK' yapıları kullanıldı.
+* **Logging Mechanism:** Her işlemin durumu ve hatalar 'Transaction_Logs' tablosuna otomatik kaydedildi.
+
+![ETL Result](01_ETL_Data_Pipeline/etl_result.png)
+
 ## 🛠️ Kullanılan Teknolojiler
 * **Database:** Microsoft SQL Server
 * **Language:** T-SQL
