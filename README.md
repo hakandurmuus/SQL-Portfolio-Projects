@@ -31,7 +31,7 @@ Kaynak sistemlerden gelen verilerde hatalı veri tipleri (String price), negatif
 * **Transaction Management:** Veri bütünlüğü için 'BEGIN TRANSACTION', 'COMMIT' ve 'ROLLBACK' yapıları kullanıldı.
 * **Logging Mechanism:** Her işlemin durumu ve hatalar 'Transaction_Logs' tablosuna otomatik kaydedildi.
 
-![ETL Result](01_ETL_Data_Pipeline/etl_result.png)
+![ETL Result](03_ETL_Data_Pipeline/etl_result.png)
 
 ## 🛠️ Kullanılan Teknolojiler
 * **Database:** Microsoft SQL Server
